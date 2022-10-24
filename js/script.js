@@ -109,4 +109,16 @@ function nextFunction(){
 
 
 //scorrimento automatico carousel
-setInterval(nextFunction, 2000);
+let autoCarousel = setInterval(nextFunction, 2000);
+
+slider.addEventListener('mouseover', function(){
+    clearInterval(autoCarousel);
+})
+
+slider.addEventListener('mouseout', function(){
+    refresh();
+})
+
+function refresh(){
+    autoCarousel = setInterval(nextFunction, 2000);
+}
