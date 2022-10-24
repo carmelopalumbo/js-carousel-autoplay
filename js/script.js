@@ -113,11 +113,9 @@ let autoCarousel = setInterval(nextFunction, 2000);
 
 slider.addEventListener('mouseover', function(){
     clearInterval(autoCarousel);
-})
+});
 
-slider.addEventListener('mouseout', function(){
-    refresh();
-})
+slider.addEventListener('mouseout', refresh);
 
 function refresh(){
     autoCarousel = setInterval(nextFunction, 2000);
