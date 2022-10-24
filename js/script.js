@@ -57,8 +57,17 @@ miniItems[counterImages].classList.add('thumb-active');
 const next = document.querySelector('.next');
 const previous = document.querySelector('.previous');
 
-previous.addEventListener('click', function(){
-    //console.log('click previous');
+previous.addEventListener('click', prevFunction);
+
+next.addEventListener('click', nextFunction);
+
+
+
+
+// funzioni
+
+//click button indietro
+function prevFunction(){
     if(counterImages === 0){
         miniItems[counterImages].classList.remove('thumb-active');
 
@@ -75,10 +84,11 @@ previous.addEventListener('click', function(){
 
         miniItems[counterImages].classList.add('thumb-active');
     }
-});
+}
 
-next.addEventListener('click', function(){
-    //console.log('click next');
+
+//click button avanti
+function nextFunction(){
     if(counterImages === items.length - 1){
         miniItems[counterImages].classList.remove('thumb-active');
 
@@ -95,4 +105,4 @@ next.addEventListener('click', function(){
 
         miniItems[counterImages].classList.add('thumb-active');
         }
-});
+}
