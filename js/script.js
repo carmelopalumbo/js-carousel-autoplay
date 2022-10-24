@@ -106,3 +106,7 @@ function nextFunction(){
         miniItems[counterImages].classList.add('thumb-active');
         }
 }
+
+
+//scorrimento automatico carousel
+setInterval(nextFunction, 2000);
